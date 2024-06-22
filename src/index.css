@@ -1,0 +1,140 @@
+#main-container{
+width: 300px;
+height: 500px;
+display: flex;
+flex-direction: column;
+margin: 2rem auto;
+border: black 4px solid;
+justify-content: center;
+align-items: center;
+border-radius: 20px;
+background-color: #211A23;
+
+
+}
+.display{
+  height: 3rem;
+  width: 70%;
+  margin-bottom: 3rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 50px); /* 4 columns of 50px width */
+  grid-template-rows: repeat(3, 50px); /* 4 rows of 50px height */
+  gap: 10px; /* Space between squares */
+}
+.grid-container1 {
+  display: grid;
+  grid-template-columns: repeat(4, 50px); /* 4 columns of 50px width */
+  grid-template-rows: repeat(4, 50px); /* 4 rows of 50px height */
+  gap: 10px; /* Space between squares */
+}
+.grid-item {
+  width: 50px;
+  height: 50px;
+  background-color: #4CAF50; /* Green color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  border-radius: 15px;
+}
+.upperOp{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.grid-super-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+.vetical-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.horizontal-container{
+  display: flex;
+  gap: 10px;
+}
+.super-container{
+  display: flex;
+  gap: 10px;
+}
+
+
+
+
+
+
+.display-answer {
+font-family: 'Digital-7 Mono', 'Courier New', Courier, monospace; /* Use a digital font if available */
+font-size: 28px; /* Adjust as needed */
+color: #00ff00; /* Green color typical of digital displays */
+background-color: #000; /* Black background for contrast */
+padding: 10px 20px; /* Add some padding for spacing */
+border-radius: 5px; /* Slight rounding of corners */
+text-align: right; /* Right align text, typical for calculators */
+width: 80%; /* Fit the content width */
+display: inline-block; /* Ensure it fits the content */
+box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Glow effect */
+
+}
+@keyframes blink {
+  0%, 100% {
+    border-right-color: rgba(0, 255, 0, 0);
+  }
+  50% {
+    border-right-color: #00ff00;
+  }
+}
+.display-answer::after{
+  content: '';
+  border-right: 2px solid #00ff00; /* Cursor */
+  animation: blink 1s step-start infinite;
+}
+
+
+
+
+/* Grid item color changes  */
+.grid-itemC{
+  width: 50px;
+  height: 50px;
+  background-color: #eb1337; /* Green color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  border-radius: 50%;
+
+}
+.grid-itemU{
+  width: 50px;
+  height: 50px;
+  background-color: #0eccf2; /* Green color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 14px;
+  border-radius: 50%;
+
+}
+.grid-item-equal{
+  width: 50px;
+  height: 50px;
+  background-color: #dae90c; /* Green color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 14px;
+  border-radius: 50%;
+
+}
