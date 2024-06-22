@@ -41,6 +41,7 @@ background-color: #211A23;
   font-size: 14px;
   border-radius: 15px;
 }
+
 .upperOp{
   display: flex;
   gap: 10px;
@@ -125,6 +126,9 @@ box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Glow effect */
   font-size: 14px;
   border-radius: 50%;
 
+}
+.grid-item:hover,.grid-itemC:hover , .grid-itemU:hover{
+  background-color: aqua;
 }
 .grid-item-equal{
   width: 50px;
