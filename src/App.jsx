@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 
 import "./App.css";
 import { evaluate, typeOf } from "mathjs";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faDeleteLeft} from "@fortawesome/free-solid-svg-icons";
 
 function App() {
 
@@ -43,12 +45,14 @@ function App() {
             return prvValue + value
           })
           setLeftBraket(false)
+          setIsResult(false)
       }
       else if(value === ')'){
           setDisplay(prvValue =>{
             return prvValue + value
           })
           setLeftBraket(true)
+          setIsResult(false)
       }
       
       else {
@@ -108,11 +112,33 @@ function App() {
       </div>
     );
   };
+  const handleBackSpace = () =>{
+    setIsResult(false)
+    if(display){
+      console.log(display);
+     
+      setDisplay(prvValue =>{
+        let values = prvValue.toString().split('');
+        values.pop()
+       
+        console.log(values)
+        return values.join('')
+      })
+    }
+    else {
+      setDisplay(display)
+    }
+  }
 
   return (
     <div id="main-container">
+    
       {/* {collectUserValue.map((value,index) => <><p>{value}{` `}{userOperation[index]}</p> </>)} */}
+      
       <h1 className="display-answer">{ display}</h1>
+      <FontAwesomeIcon  onClick={handleBackSpace} className="back-space"  icon={faDeleteLeft} />
+      
+      
       {mainDisplay()}
     </div>
   );
